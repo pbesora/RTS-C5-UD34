@@ -1,0 +1,47 @@
+
+
+
+  <h1 style="text-align:center">
+    Bienvenido a {{ title }} {{ name }}
+  </h1>
+  <div id="main" class="container text-center shadow-lg">
+    <div id="textPanel" class="row">
+      <div class="col-12"><input id="historyInput" type="text" readonly value={{history}}></div>
+      <div class="col-12"><input id="mainInput" type="text" readonly value={{input}}></div>
+    </div>
+    <div class="row">
+      <div id="numKeys" class="col-9">
+        <div class="row">
+          <button class="col btn btn-primary" (click)="numClick(7)">7</button>
+          <button class="col btn btn-primary" (click)="numClick(8)">8</button>
+          <button class="col btn btn-primary" (click)="numClick(9)">9</button>
+        </div>
+        <div class="row">
+          <button class="col btn btn-primary" (click)="numClick(4)">4</button>
+          <button class="col btn btn-primary" (click)="numClick(5)">5</button>
+          <button class="col btn btn-primary" (click)="numClick(6)">6</button>
+        </div>
+        <div class="row">
+          <button class="col btn btn-primary" (click)="numClick(1)">1</button>
+          <button class="col btn btn-primary" (click)="numClick(2)">2</button>
+          <button class="col btn btn-primary" (click)="numClick(3)">3</button>
+        </div>
+        <div class="row">
+          <button class="col btn btn-primary" (click)="dec()">.</button>
+          <button class="col btn btn-primary" (click)="numClick(0)">0</button>
+          <button class="col btn btn-primary" (click)="sign()">+/-</button>
+        </div>
+      </div>
+
+      <div id="opKeys" class="col-3">
+        <button class="btn btn-primary" (click)="deleteButton()">C</button>
+        <button class="btn btn-primary" (click)="basicOp('/')">/</button>
+        <button class="btn btn-primary" (click)="basicOp('*')">*</button>
+        <button class="btn btn-primary" (click)="basicOp('-')">-</button>
+        <button class="btn btn-primary" (click)="basicOp('+')">+</button>
+        <button class="btn btn-primary" (click)="equals()">=</button>
+      </div>
+    </div>
+  </div>
+
+
